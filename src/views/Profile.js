@@ -1,8 +1,12 @@
 import React from "react";
+import Nav from "../components/Nav";
 
 const Profile = (props) => {
   return (
-    <h1>Profile View</h1>
+    <div className="container">
+      <Nav page="profile" />
+      <h1>Profile View</h1>
+    </div>
   )
 }
 

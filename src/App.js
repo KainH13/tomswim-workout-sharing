@@ -1,6 +1,5 @@
 import React from 'react';
 import { Router } from '@reach/router';
-import './App.css';
 
 // views
 import LoginRegistration from './views/LoginRegistration';
