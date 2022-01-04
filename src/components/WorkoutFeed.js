@@ -50,7 +50,7 @@ const WorkoutFeed = (props) => {
     <div>
       <h1 className="text-center">Workout Feed</h1>
       {testWorkouts.map((workout, index) => (
-        <div>
+        <div key={index}>
           <div className="card mb-2">
             <div className="card-body">
               <h5 className="card-title">{workout.title}</h5>

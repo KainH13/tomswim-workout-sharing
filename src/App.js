@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Router } from '@reach/router';
 
 // views
@@ -11,13 +11,15 @@ import User from './views/User';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+  const [workouts, setWorkouts] = useState([]);
+
   return (
     <div className="App">
       <Router>
         <LoginRegistration path="/login" />
-        <Home path="/home" />
-        <Profile path="/profile" />
-        <User path="/user" />
+        <Home path="/home" workouts={workouts} setWorkouts={setWorkouts} />
+        <Profile path="/profile" workouts={workouts} setWorkouts={setWorkouts} />
+        <User path="/user" workouts={workouts} />
       </Router>
     </div>
   );
