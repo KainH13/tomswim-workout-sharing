@@ -40,6 +40,7 @@ const CreateWorkout = (props) => {
             type="text"
             className="form-control"
             id="title"
+            value={title}
             onChange={(e) => {
               setTitle(e.target.value);
             }}
@@ -53,6 +54,7 @@ const CreateWorkout = (props) => {
             type="text"
             className="form-control"
             id="coach"
+            value={coach}
             onChange={(e) => {
               setCoach(e.target.value);
             }}
@@ -64,11 +66,13 @@ const CreateWorkout = (props) => {
           </label>
           <textarea
             className="form-control"
+            style={{whiteSpace: "pre-wrap"}}
             name="workout"
             id="workout"
             cols="30"
             rows="10"
             wrap="hard"
+            value={workout}
             onChange={(e) => {
               setWorkout(e.target.value);
             }}
