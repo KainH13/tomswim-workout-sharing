@@ -51,27 +51,29 @@ const WorkoutFeed = (props) => {
   return (
     <div>
       <h1 className="text-center">Workout Feed</h1>
-      {workouts.map((workout, index) => (
-        <div key={index}>
-          <div className="card mb-2">
-            <div className="card-body">
-              <h5 className="card-title">{workout.title}</h5>
-              <h6 className="card-subtitle mb-2 text-muted">{workout.coach}</h6>
-              <p style={{whiteSpace: "pre-wrap"}} className="card-text">{workout.body}</p>
-              <div className="w-25 row">
-                <div className="col">
-                  <p className="text-end">{workout.likes}</p>
-                </div>
-                <div className="col">
-                  <a href="/#" className="card-link">
-                    like
-                  </a>
+      <div style={{height:"50em", overflow: "auto"}}>
+        {workouts.map((workout, index) => (
+          <div key={index}>
+            <div className="card mb-2">
+              <div className="card-body">
+                <h5 className="card-title">{workout.title}</h5>
+                <h6 className="card-subtitle mb-2 text-muted">{workout.coach}</h6>
+                <p style={{whiteSpace: "pre-wrap"}} className="card-text">{workout.body}</p>
+                <div className="w-25 row">
+                  <div className="col">
+                    <p className="text-end">{workout.likes}</p>
+                  </div>
+                  <div className="col">
+                    <a href="/#" className="card-link">
+                      like
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
