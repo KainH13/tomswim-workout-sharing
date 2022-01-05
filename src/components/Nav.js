@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "@reach/router";
 
 const Nav = (props) => {
   const { page } = props;
@@ -8,15 +9,15 @@ const Nav = (props) => {
       <div className="row align-items-top justify-content-between">
         <h1 className="navbar-brand col-4 m-2">TomSwim</h1>
         <div className="nav col-4 d-flex justify-content-end">
-          <a className="nav-link disabled m-2" href="/home">
+          <Link className="nav-link disabled m-2" to="/home">
             Home
-          </a>
-          <a className="nav-link m-2" href="/profile">
+          </Link>
+          <Link className="nav-link m-2" to="/profile">
             Profile
-          </a>
-          <a className="nav-link m-2" href="/#">
+          </Link>
+          <Link className="nav-link m-2" to="/#">
             Logout
-          </a>
+          </Link>
         </div>
       </div>
     );
@@ -27,15 +28,15 @@ const Nav = (props) => {
       <div className="row align-items-top justify-content-between">
         <h1 className="navbar-brand col-4 m-2">TomSwim</h1>
         <div className="nav col-4 d-flex justify-content-end">
-          <a className="nav-link m-2" href="/home">
+          <Link className="nav-link m-2" to="/home">
             Home
-          </a>
-          <a className="nav-link disabled m-2" href="/profile">
+          </Link>
+          <Link className="nav-link disabled m-2" to="/profile">
             Profile
-          </a>
-          <a className="nav-link m-2" href="/#">
+          </Link>
+          <Link className="nav-link m-2" to="/#">
             Logout
-          </a>
+          </Link>
         </div>
       </div>
     );
@@ -45,15 +46,15 @@ const Nav = (props) => {
     <div className="row align-items-top justify-content-between">
       <h1 className="navbar-brand col-4 m-2">TomSwim</h1>
       <div className="nav col-4 d-flex justify-content-end">
-        <a className="nav-link m-2" href="/home">
+        <Link className="nav-link disabled m-2" to="/home">
           Home
-        </a>
-        <a className="nav-link disabled m-2" href="/profile">
+        </Link>
+        <Link className="nav-link m-2" to="/profile">
           Profile
-        </a>
-        <a className="nav-link m-2" href="/#">
+        </Link>
+        <Link className="nav-link m-2" to="/#">
           Logout
-        </a>
+        </Link>
       </div>
     </div>
   );
