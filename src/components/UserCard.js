@@ -3,9 +3,6 @@ import React, { useState } from "react";
 const UserCard = (props) => {
   const { user } = props;
 
-  // state for edit functionality
-  const [editing, setEditing] = useState(false);
-
   return (
     <div>
       <div class="card mb-3">
