@@ -51,7 +51,7 @@ const WorkoutFeed = (props) => {
   return (
     <div>
       <h1 className="text-center">Workout Feed</h1>
-      <div style={{height:"50em", overflow: "auto"}}>
+      <div style={{height:"800px", overflow: "auto"}}>
         {workouts.map((workout, index) => (
           <div key={index}>
             <div className="card mb-2">
