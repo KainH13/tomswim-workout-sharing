@@ -1,17 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Nav from "../components/Nav";
 import CreateWorkout from "../components/CreateWorkout";
 import WorkoutFeed from "../components/WorkoutFeed";
 import ProfileCard from "../components/ProfileCard";
 
 const Profile = (props) => {
-  const { workouts, setWorkouts } = props
+  const { workouts, setWorkouts } = props;
 
-  const testUser = {
+  const [user, setUser] = useState({
     username: "TomSwim",
-    about: "Lifelong swimmer who love coaching and sharing workouts!",
-    workouts: "500"
-  }
+    about: "Lifelong swimmer who loves coaching and sharing workouts!",
+    workouts: "500",
+  });
 
   return (
     <div className="container">
@@ -19,7 +19,7 @@ const Profile = (props) => {
       <div className="container">
         <div className="row">
           <div className="col">
-            <ProfileCard testUser={testUser} />
+            <ProfileCard user={user} setUser={setUser} />
             <CreateWorkout workouts={workouts} setWorkouts={setWorkouts} />
           </div>
           <div className="col">
@@ -28,7 +28,7 @@ const Profile = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Profile;

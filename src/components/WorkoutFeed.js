@@ -49,8 +49,8 @@ const WorkoutFeed = (props) => {
   // ];
 
   return (
-    <div>
-      <h1 className="text-center">Workout Feed</h1>
+    <div className="border rounded p-2">
+      <h2 className="text-center">Workout Feed</h2>
       <div style={{height:"800px", overflow: "auto"}}>
         {workouts.map((workout, index) => (
           <div key={index}>

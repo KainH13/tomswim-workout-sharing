@@ -29,8 +29,8 @@ const CreateWorkout = (props) => {
   };
 
   return (
-    <div>
-      <h1 className="text-center">Add a Workout</h1>
+    <div className="border rounded p-2">
+      <h2 className="text-center">Add a Workout</h2>
       <form onSubmit={submitHandler}>
         <div className="mb-3">
           <label htmlFor="title" className="form-label">
