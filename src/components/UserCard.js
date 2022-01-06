@@ -5,20 +5,20 @@ const UserCard = (props) => {
 
   return (
     <div>
-      <div class="card mb-3">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="..." class="img-fluid rounded-start" alt="..." />
+      <div className="card mb-3">
+        <div className="row g-0">
+          <div className="col-md-4">
+            <img src="..." className="img-fluid rounded-start" alt="..." />
           </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h2 class="card-title">{user.username}</h2>
-              <p class="card-text">
+          <div className="col-md-8">
+            <div className="card-body">
+              <h2 className="card-title">{user.username}</h2>
+              <p className="card-text">
                 {user.about}
               </p>
               <button className="btn btn-primary my-1">Follow</button>
-              <p class="card-text">
-                <small class="text-muted">Workouts: {user.workouts}</small>
+              <p className="card-text">
+                <small className="text-muted">Workouts: {user.workouts}</small>
               </p>
             </div>
           </div>
