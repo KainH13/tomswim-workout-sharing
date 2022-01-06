@@ -41,6 +41,25 @@ const Nav = (props) => {
       </div>
     );
   }
+  
+  if (page === "user") {
+    return (
+      <div className="row align-items-top justify-content-between">
+        <h1 className="navbar-brand col-4 m-2">TomSwim</h1>
+        <div className="nav col-4 d-flex justify-content-end">
+          <Link className="nav-link m-2" to="/home">
+            Home
+          </Link>
+          <Link className="nav-link m-2" to="/profile">
+            Profile
+          </Link>
+          <Link className="nav-link m-2" to="/#">
+            Logout
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="row align-items-top justify-content-between">
