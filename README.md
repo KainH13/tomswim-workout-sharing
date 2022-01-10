@@ -1,4 +1,4 @@
-#Swim Workout Sharing Web App#
+# Swim Workout Sharing Web App
 
 The Goal: Build a platform where users can create and share swim workouts while liking each others workouts and following their favorite creators to generate a custom feed.
 
