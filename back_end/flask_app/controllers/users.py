@@ -1,4 +1,3 @@
-import bcrypt
 from flask_app.models.user import User
 from flask_app import app
 from flask import jsonify, request
