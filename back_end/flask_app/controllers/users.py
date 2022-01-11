@@ -17,6 +17,11 @@ def create_user():
     return jsonify(User.create(data))
 
 # Read
+@app.route('/api/get/user', methods=['POST'])
+def user_by_id():
+    data = {"id": request.json["id"]}
+    return jsonify(User.get_user_by_id(data)[0])
+
 @app.route('/api/users')
 def all_users():
     return jsonify(User.get_all_users())

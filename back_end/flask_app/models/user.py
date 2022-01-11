@@ -20,6 +20,11 @@ class User:
 
     # Read
     @classmethod
+    def get_user_by_id(cls, data):
+        query = "SELECT * FROM users WHERE id=%(id)s;"
+        return connectToMySQL(cls.db).query_db(query, data)
+
+    @classmethod
     def get_all_users(cls):
         query = "SELECT * FROM users;"
         return connectToMySQL(cls.db).query_db(query)

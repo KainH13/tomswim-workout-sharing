@@ -19,7 +19,9 @@ const User = (props) => {
   // }
 
   useEffect( () => {
-    axios.get('http://localhost:4999/test/user')
+    axios.post('http://localhost:4999/api/get/user', {
+      "id": "8"
+    })
       .then(response => {
         console.log(response.data);
         setUser(response.data);
