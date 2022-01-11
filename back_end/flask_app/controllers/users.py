@@ -7,10 +7,10 @@ bcrypt = Bcrypt(app)
 # Create
 @app.route('/api/user/register', methods=['POST'])
 def create_user():
-    pw_hash = bcrypt.generate_password_hash(request.args["password"])
+    pw_hash = bcrypt.generate_password_hash(request.form["password"])
     data = {
-        "username": request.args["username"],
-        "email": request.args["email"],
+        "username": request.form["username"],
+        "email": request.form["email"],
         "password": pw_hash,
     }
     
