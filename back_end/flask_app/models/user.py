@@ -32,3 +32,15 @@ class User:
         for entry in results:
             all_emails.append(entry['email'])
         return all_emails
+
+    # Update
+    @classmethod
+    def update_user_by_id(cls, data):
+        query = "UPDATE users SET username=%(username)s, about=%(about)s WHERE id=%(id)s;"
+        return connectToMySQL(cls.db).query_db(query, data)
+
+    # Delete
+    @classmethod
+    def delete_user_by_id(cls, data):
+        query = "DELETE FROM users WHERE id=%(id)s;"
+        return connectToMySQL(cls.db).query_db(query, data)

@@ -7,10 +7,10 @@ bcrypt = Bcrypt(app)
 # Create
 @app.route('/api/user/register', methods=['POST'])
 def create_user():
-    pw_hash = bcrypt.generate_password_hash(request.form["password"])
+    pw_hash = bcrypt.generate_password_hash(request.json["password"])
     data = {
-        "username": request.form["username"],
-        "email": request.form["email"],
+        "username": request.json["username"],
+        "email": request.json["email"],
         "password": pw_hash,
     }
     
@@ -25,16 +25,18 @@ def all_users():
 def all_emails():
     return jsonify(User.get_all_emails())
 
-# @app.route('/users')
-# def users():
-#     return jsonify(User.get_all_json())
+# Update
+@app.route('/api/user/update', methods=['POST'])
+def update_user():
+    data = {
+        "id": request.json["id"],
+        "username": request.json["username"],
+        "about": request.json["about"],
+    }
+    return jsonify(User.update_user_by_id(data))
 
-# @app.route('/create/user', methods=['POST'])
-# def create_user():
-#     print(request.form)
-#     data = {
-#         'user_name' : request.form['user_name'],
-#         'email' : request.form['email']
-#     }
-#     return jsonify(User.save(data))
-    
+# Delete
+@app.route('/api/user/delete', methods=['POST'])
+def delete_user():
+    data = {"id": request.json["id"]}
+    return jsonify(User.delete_user_by_id(data))
