@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <LoginRegistration path="/login" />
+        <LoginRegistration path="/" />
         <Home path="/home" workouts={workouts} setWorkouts={setWorkouts} />
         <Profile path="/profile" workouts={workouts} setWorkouts={setWorkouts} />
         <User path="/user" workouts={workouts} />
