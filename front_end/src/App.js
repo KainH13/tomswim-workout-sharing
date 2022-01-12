@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <Router>
         <LoginRegistration path="/" userID={userID} setUserID={setUserID} />
-        <Home path="/home" workouts={workouts} setWorkouts={setWorkouts} />
+        <Home path="/home" userID={userID} workouts={workouts} setWorkouts={setWorkouts} />
         <Profile path="/profile" workouts={workouts} setWorkouts={setWorkouts} />
         <User path="/user" workouts={workouts} />
       </Router>

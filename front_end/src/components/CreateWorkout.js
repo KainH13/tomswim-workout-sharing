@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const CreateWorkout = (props) => {
-  const { workouts, setWorkouts } = props;
+  const { userID, workouts, setWorkouts } = props;
 
   // set up form attributes
   const [title, setTitle] = useState("");
