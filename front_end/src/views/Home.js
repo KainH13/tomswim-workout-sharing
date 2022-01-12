@@ -5,7 +5,7 @@ import WorkoutFeed from "../components/WorkoutFeed";
 
 
 const Home = (props) => {
-  const {workouts, setWorkouts} = props
+  const { userID, workouts, setWorkouts} = props
 
   return (
     <div className="container">
@@ -16,7 +16,7 @@ const Home = (props) => {
             <WorkoutFeed workouts={workouts} />
           </div>
           <div className="col">
-            <CreateWorkout workouts={workouts} setWorkouts={setWorkouts} />
+            <CreateWorkout userID={userID} workouts={workouts} setWorkouts={setWorkouts} />
           </div>
         </div>
       </div>
