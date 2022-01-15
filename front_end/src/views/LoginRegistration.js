@@ -5,20 +5,20 @@ import Registration from "../components/Registration";
 import Login from "../components/Login";
 
 const LoginRegistration = (props) => {
-  const { userID, setUserID } = props
+    const { userID, setUserID } = props;
 
-  return (
-    <div className="container">
-      <div className="navbar d-flex justify-content-start align-items-start">
-          <h1>TomSwim</h1>
-          <h4 className="m-3">Swim Workout Sharing</h4>
-      </div>
-      <div className="row">
-        <Registration userID={userID} setUserID={setUserID} />
-        <Login />
-      </div>
-    </div>
-  )
-}
+    return (
+        <div className="container">
+            <div className="navbar d-flex justify-content-start align-items-start">
+                <h1>TomSwim</h1>
+                <h4 className="m-3">Swim Workout Sharing</h4>
+            </div>
+            <div className="row">
+                <Registration userID={userID} setUserID={setUserID} />
+                <Login />
+            </div>
+        </div>
+    );
+};
 
 export default LoginRegistration;
